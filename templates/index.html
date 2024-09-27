@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kmeans homework</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>my kmeans homework</h1>
+    </header>
+
+    <section>
+        <div class="controls">
+            <button id="generate-data" onclick="generator()">Generate Datas</button>
+
+            <label for="init-method">Initialization:</label>
+            <select id="init-method" onchange="clearer()">
+                <option value="random">Random</option>
+                <option value="farthest">Farthest First</option>
+                <option value="kmeans++">KMeans++</option>
+                <option value="manual">Manual</option>
+            </select>
+
+            <label for="num-clusters">Clusters:</label>
+            <input type="number" id="num-clusters" value="3" min="1" onchange="clearer()">
+
+            <div class="action-buttons">
+                <button onclick="initialize()">Init KMeans</button>
+                <button onclick="stepper()">Step</button>
+                <button onclick="runner()">Run To Convergence</button>
+                <button onclick="resetter()">Clear</button>
+            </div>
+        </div>
+
+        <div class="plot-area">
+            <svg id="plot" viewBox="0 0 800 600"></svg>
+        </div>
+    </section>
+
+    <section>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="notification">
+              {% for message in messages %}
+                <p class="flash-message">{{ message }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+    </section>
+
+    <footer>
+        <p>&copy; thx for grade i hope you are having good day :-D pls</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

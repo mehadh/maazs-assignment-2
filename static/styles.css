@@ -1,0 +1,86 @@
+body {
+    font-family: "Comic Sans MS", "Comic Sans", cursive; /* Iconic 90s font */
+    background-color: #ffcc00; /* Bright background color */
+    color: #ff00ff; /* Eye-catching magenta text */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #00ff00; /* Bright neon green */
+    text-shadow: 3px 3px #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#plot {
+    width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    border: 10px dashed #00ffff;
+    background-color: #ffff00; /* Yellow background for plot */
+    position: relative;
+}
+
+.flash-messages {
+    font-family: "Courier New", Courier, monospace;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #0000ff; /* Bright blue flash message background */
+    padding: 10px;
+    border: 3px solid #ff00ff;
+}
+
+div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #00ff00; /* Bright neon green buttons */
+    color: #ff00ff; /* Magenta text */
+    font-size: 24px; /* Huge button text */
+    border: 5px solid #0000ff;
+    padding: 20px 40px;
+    cursor: pointer;
+    position: relative;
+    animation: button-wiggle 2s infinite ease-in-out; /* Wiggle left and right */
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #ff0000; /* Flashy red on hover */
+}
+
+select, input[type="number"] {
+    background-color: #0000ff;
+    color: #ffff00; /* Yellow text */
+    font-size: 20px;
+    border: 3px solid #ff00ff;
+    padding: 10px;
+    margin: 5px;
+}
+
+@keyframes button-wiggle {
+    0%, 100% {
+        left: 0px;
+    }
+    50% {
+        left: 10px;
+    }
+}
+
+
+button, select, input[type="number"] {
+    width: 300px;
+    height: 100px;
+    display: inline-block;
+}
+
+input[type="number"] {
+    width: 100px; 
+    height: 60px;
+}
