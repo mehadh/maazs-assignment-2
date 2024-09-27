@@ -2,9 +2,9 @@ name: Python application
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ] # why politicaly correct chat gpt its ruin my works
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
   workflow_dispatch:  
 jobs:
   build:
